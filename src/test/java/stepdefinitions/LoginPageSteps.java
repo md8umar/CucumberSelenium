@@ -10,7 +10,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 
-@SuppressWarnings("deprecation")
 public class LoginPageSteps {
 	private String title;
 	private LoginPage loginpage= new LoginPage(DriverFactory.getDriver());
@@ -30,7 +29,7 @@ public class LoginPageSteps {
 
 	@Then("page title should be {string}")
 	public void page_title_should_be(String string) {
-		title= loginpage.getLoginPageTile();
+	
 		Assert.assertTrue(title.contains(string));
 	}
 
